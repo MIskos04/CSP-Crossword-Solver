@@ -133,7 +133,7 @@ char ** create_crossword(char * crossword_file, char *** crossw2, int  * size, i
 
 char *** create_dictionary(char * file, int max_length, int * count) {
     char temp[81], ***dict;
-    int length, i, j, k;
+    int length, i, j;
     FILE * ptr;
     ptr = fopen(file, "r");
     if (ptr == NULL) {

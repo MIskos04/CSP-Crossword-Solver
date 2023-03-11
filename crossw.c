@@ -2,7 +2,7 @@
 #include "libraries.h"
 
 void free_memory(slot_pointer *slots, int words, char ***dict, int *count, int max_length, uint32_t **** bitmap, char *ltable, char **crossw, char **crossw2, int size){
-    int i, j, k, m;
+    int i, j, m;
     for(i = 0; i < words; i++){
         free(slots[i]->current_domain);
         free(slots[i]->word);
@@ -58,7 +58,7 @@ void free_memory(slot_pointer *slots, int words, char ***dict, int *count, int m
 
 //Main Function of the program
 int main(int argc, char * argv[]) {
-    int i,j,words, max_length, size, draw, check, solved;
+    int i,words, max_length, size, draw, check, solved;
     char **crossw, **crossw2, dict_file[81];
 
     //Initializes variables check, draw and dict_file to default values

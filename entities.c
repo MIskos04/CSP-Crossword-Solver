@@ -160,7 +160,6 @@ slot_pointer * create_slots(char ** crossw, char ** crossw2, int size, int words
         printf("Failed to allocate memory\n");
         exit(0);
     }
-    slot_pointer temp;
 
     for (i = 0; i <= words - 1; i++) {
         slots[i] = malloc(sizeof(struct slot));

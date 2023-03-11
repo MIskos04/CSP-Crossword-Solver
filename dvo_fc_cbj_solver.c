@@ -48,7 +48,7 @@ int calculate_domain_size(slot_pointer *slots, int i, char * ltable){
 //A function that removes from slots[j]'s current domain all values that are not consistent with slots[i]'s current instantiation.
 //It returns 1 if there are remaining values in slots[j]'s current domain or 0 if there are not.
 int check_forward(slot_pointer *slots, char ***dict, uint32_t ****bitmap, int *count, char *ltable, int *consistent, int i, int j){
-    int k,m;
+    int m;
     int index = slots[i]->intercepts[j]->slot;
     uint32_t reduction[slots[index]->ints];
     uint32_t temp;
@@ -245,7 +245,7 @@ int choose_value(slot_pointer *slots, int words, stack_pointer filled){
 }
 
 int solver(slot_pointer *slots, char ***dict, int words, int *count, uint32_t ****bitmap, char * ltable){
-    int i, j, consistent = 1, status = -1;
+    int i, consistent = 1, status = -1;
     stack_pointer filled; 
     char **conf_set;
 
